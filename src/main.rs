@@ -68,7 +68,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     // read from stdin and send through channel
     loop {
         print!("> ");
-        io::stdout().flush().unwrap();
+        io::stdout().flush()?;
 
         let mut input = String::new();
         io::stdin().read_line(&mut input)?;
